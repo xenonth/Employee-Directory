@@ -1,9 +1,30 @@
-import Table from "react-bootstrap/table"
+import React from 'react';
 
-import employeeList from "../utils/API.js"
+import axios from 'axios';
 
-const employeeData = employeeList()
+export default class EmployeeList extends React.Component {
+  state = {
+    employees: []
+  }
 
-function TableLine () {
-    return 
+  componentDidMount() {
+    axios.get('https://randomuser.me/api/').then(res => {
+        const employees = res.results;
+        this.setState({ employees });
+      })
+  }
+
+  render() {
+    return (
+      <tbody>
+        { this.state.employees.map(employee => 
+          <tr>
+          <td>{employee.name.first}</td>
+          <td>{employee.name.last}</td>
+          <td>{employee.email}</td>
+          </tr>
+          )}
+      </tbody>
+    )
+  }
 }

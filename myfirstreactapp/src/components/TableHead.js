@@ -7,7 +7,8 @@ function TableHead () {
           <th>#</th>
           <th>First Name</th>
           <th>Last Name</th>
-          <th>Username</th>
+          <th>email</th>
+          <th>Birthday</th>
         </tr>
       </thead>)
 }
