@@ -1,10 +1,11 @@
-function Table() {
+function EmployeeTable() {
     return (
-      <div className="Table">
-        Table      
+      <div>
+
+              
   
       </div>
     );
   }
   
-  export default Table;
+  export default EmployeeTable;
