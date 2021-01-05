@@ -1,12 +1,10 @@
 import axios from "axios";
  
-     
-const EmployeeList = () => { 
-      return axios.get('https://randomuser.me/api/', {  
-          params: {
-            dataType: 'json',
-        }
-      }
-    )}
+//setup category and property functions once data is rendering to the screen
 
-module.exports = EmployeeList;
+// eslint-disable-next-line import/no-anonymous-default-export
+export default {
+    employeeList: function() {     
+        return axios.get('https://randomuser.me/api/?format=json');
+    },
+}

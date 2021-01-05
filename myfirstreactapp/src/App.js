@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 //My own components
-import EmployeeTable from "./components/Table"
+import EmployeeTable from "./components/EmployeeTable"
 import Property from "./components/Property"
 import Category from "./components/Category"
 import 'bootstrap/dist/css/bootstrap.min.css';
