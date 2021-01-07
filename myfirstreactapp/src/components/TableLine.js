@@ -8,8 +8,9 @@ export default class EmployeeList extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('https://randomuser.me/api/').then(res => {
-        const employees = res.results;
+    axios.get('https://randomuser.me/api/?results=10').then(res => {
+      const employees = res.data.results;
+      console.log(employees);
         this.setState({ employees });
       })
   }
@@ -18,10 +19,11 @@ export default class EmployeeList extends React.Component {
     return (
       <tbody>
         { this.state.employees.map(employee => 
-          <tr>
+          <tr key = {employee.login.uuid}>
           <td>{employee.name.first}</td>
           <td>{employee.name.last}</td>
           <td>{employee.email}</td>
+          <td>{employee.dob.age}</td>
           </tr>
           )}
       </tbody>

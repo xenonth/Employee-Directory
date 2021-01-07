@@ -4,11 +4,10 @@ function TableHead () {
     return (
         <thead>
         <tr>
-          <th>#</th>
           <th>First Name</th>
           <th>Last Name</th>
-          <th>email</th>
-          <th>Birthday</th>
+          <th>Email</th>
+          <th>Age</th>
         </tr>
       </thead>)
 }
