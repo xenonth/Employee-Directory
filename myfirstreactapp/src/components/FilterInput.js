@@ -16,26 +16,57 @@ class FilterForm extends React.Component {
     handleChange(event) {
       this.setState({value: event.target.value});
     }
-  
+
     handleSubmit(event) {
-      
       event.preventDefault();
-        if (this.state.value === '' ) {
+        if (this.state.value === '') {
             return employeeData;
-        } else if (this.state.value === employeeData.map( 
-            employee => employee.name
-        )) {
-            let filteredEmployee= employeeData.name.filter(this.state.value)
-            console.log(filteredEmployee)
-            return filteredEmployee
+
+        } else if(Number(this.state.value) === 1) {
+           //DataFiltering
+           let filteredData = employeeData.find(employee => employee.id === 1)
+           console.log(filteredData)
+           alert(`${filteredData.name} is an employee at this firm and is favourite Hobby is ${filteredData.hobby}`)        
+        
+        }   else if(Number(this.state.value) === 2) {
+            //DataFiltering
+            let filteredData = employeeData.find(employee => employee.id === 2)
+            console.log(filteredData)
+            alert(`${filteredData.name} is an employee at this firm and their favourite Hobby is ${filteredData.hobby}`)
+
+         } else if(Number(this.state.value) === 3) {
+            //DataFiltering
+            let filteredData = employeeData.find(employee => employee.id === 3)
+            console.log(filteredData)
+            alert(`${filteredData.name} is an employee at this firm and their favourite Hobby is ${filteredData.hobby}`)        
+         } else if(Number(this.state.value) === 4) {
+            //DataFiltering
+            let filteredData = employeeData.find(employee => employee.id === 4)
+            console.log(filteredData)
+            alert(`${filteredData.name} is an employee at this firm and their favourite Hobby is ${filteredData.hobby}`)        
+         } else if(Number(this.state.value) === 5) {
+            //DataFiltering
+            let filteredData = employeeData.find(employee => employee.id === 5)
+            console.log(filteredData)
+            alert(`${filteredData.name} is an employee at this firm and their favourite Hobby is ${filteredData.hobby}`) 
+        } else if(Number(this.state.value) === 6) {
+            //DataFiltering
+            let filteredData = employeeData.find(employee => employee.id === 6)
+            console.log(filteredData)
+            alert(`${filteredData.name} is an employee at this firm and their favourite Hobby is ${filteredData.hobby}`) 
+        }   else if(Number(this.state.value) === 7) {
+            //DataFiltering
+            let filteredData = employeeData.find(employee => employee.id === 7)
+            console.log(filteredData)
+            alert(`${filteredData.name} is an employee at this firm and their favourite Hobby is ${filteredData.hobby}`) 
         }
-    }
+    }   
   
     render() {
       return (
         <form onSubmit={this.handleSubmit}>
           <label>
-            Filter By Employee Name:
+            Filter By Employee Id:
             <input type="text" value={this.state.value} onChange={this.handleChange} />
           </label>
           <input type="submit" value="Submit" />
