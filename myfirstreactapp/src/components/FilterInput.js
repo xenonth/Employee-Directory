@@ -1,5 +1,9 @@
 import React from 'react';
 
+
+// import employee Data to be filtered
+import employeeData from './EmployeeData'
+
 class FilterForm extends React.Component {
     constructor(props) {
       super(props);
@@ -16,10 +20,14 @@ class FilterForm extends React.Component {
     handleSubmit(event) {
       
       event.preventDefault();
-        if (this.state.value === "Patricia") {
-            alert('A name was submitted: ' + this.state.value);
-        } else if (this.state.value !== "Patricia") {
-            alert('Data not Found!')
+        if (this.state.value === '' ) {
+            return employeeData;
+        } else if (this.state.value === employeeData.map( 
+            employee => employee.name
+        )) {
+            let filteredEmployee= employeeData.name.filter(this.state.value)
+            console.log(filteredEmployee)
+            return filteredEmployee
         }
     }
   
