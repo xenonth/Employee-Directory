@@ -24,7 +24,7 @@
 The consumer will be able to view their employees name, age and main hobby/personal interest.
 
 ### How to Install
-This program is able to be used and tracked from the following location [!Application](https://damp-cove-93453.herokuapp.com/?id=5fd3ffd57b7c86402879f449)
+This program is able to be used and tracked from the following location [!Application]https://xenonth.github.io/Employee-Directory/)
 
 ### Instructions
 To search for an employee type their exact name into the input field and the table should re-render to bring up that exact employee
